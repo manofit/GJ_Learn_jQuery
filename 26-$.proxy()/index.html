@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var objPerson={
+                name:"Gaojun",
+                age:32,
+                test:function () {
+                    $("div").after("Name:"+this.name+"<br>Age:"+this.age);
+                }
+            };
+            $("button").click($.proxy(objPerson,"test"));
+        });
+    </script>
+</head>
+<body>
+
+<button>执行test函数</button>
+<div></div>
+
+</body>
+</html>

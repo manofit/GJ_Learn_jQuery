@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("a").click(function (event) {
+                event.preventDefault();
+                alert("检查preventDefault方法是否被调用:"+event.isDefaultPrevented());
+            })
+        })
+    </script>
+</head>
+<body>
+
+<a href="http://www.baidu.com">菜鸟教程</a>
+<p>preventdefault方法用于防止链接点开</p>
+<p>点击链接检测默认动作是否被保护</p>
+
+</body>
+</html>

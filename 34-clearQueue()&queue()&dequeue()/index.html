@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var div=$("div");
+            $("#start").click(function () {
+                div.animate({height:300},"slow");
+                div.animate({width:300},"slow");
+                div.queue(function () {
+                    div.css("background-color","red");
+                    div.dequeue();
+                });
+                div.animate({height:100},"slow");
+                div.animate({width:100},"slow");
+            });
+            $("#stop").click(function () {
+                div.clearQueue();
+            })
+        })
+    </script>
+</head>
+<body>
+
+<p>queue() 方法显示被选元素上要执行的函数队列。</p>
+<p>dequeue() 从队列移除下一个函数，然后执行函数。</p>
+<p>clearQueue() 方法从尚未运行的队列中移除所有项目。<p>
+<p>
+    <button id="start">开始动画</button>
+    <button id="stop">停止动画</button>
+</p>
+<div style="background:#98bf21;height:100px;width:100px;position:relative"></div>
+
+</body>
+</html>

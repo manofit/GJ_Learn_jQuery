@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("div").delegate("p","click",function(){
+                $(this).slideToggle();
+            });
+            $("button").click(function(){
+                $("<p>这是一个新段落。</p>").insertAfter("button");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div style="background-color: yellow">
+    <p>这是一个段落</p>
+    <p>点击任意一个p元素，使其消失，包括这个</p>
+    <button>在这个按钮后面增加一个P元素</button>
+</div>
+
+</body>
+</html>

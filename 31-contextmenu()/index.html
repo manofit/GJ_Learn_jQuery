@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div").contextmenu(function () {
+                alert("contextmenu被调用");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div id="target">右键单击这里</div>
+
+</body>
+</html>

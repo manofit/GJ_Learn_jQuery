@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(document).mousemove(function (event) {
+                $("span").text("X:"+event.pageX+"Y:"+event.pageY);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>鼠标指针在:<span></span></p>
+
+</body>
+</html>

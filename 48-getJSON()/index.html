@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.getJSON("demo_ajax_json.js",function (result) {
+                    $.each(result,function (i, field) {
+                        $("div").append(field+" ");
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button>获取 JSON 数据</button>
+<div></div>
+
+</body>
+</html>

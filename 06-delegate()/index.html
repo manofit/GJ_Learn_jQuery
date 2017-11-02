@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div").delegate("p","click",function () {
+                $("p").css("background-color","pink");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div style="background-color: yellow">
+    <p>这个段落在div元素内</p>
+</div>
+<p>这是一个段落</p>
+
+</body>
+</html>

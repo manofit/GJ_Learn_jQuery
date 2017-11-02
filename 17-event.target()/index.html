@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p,button,h1").click(function (event) {
+                $("div").html("通过"+event.target.nodeName+"元素出发");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<h1>这是标题</h1>
+<p>这是一个段落</p>
+<button>这是一个按钮</button>
+<p>标题，段落和按钮元素设置了点击事件。分别点击元素查看是哪个元素的事件被触发了。</p>
+<div style="color:blue;"></div>
+
+</body>
+</html>

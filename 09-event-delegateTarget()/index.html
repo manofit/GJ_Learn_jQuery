@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div").on("click","button",function (event) {
+                $(event.delegateTarget).css("background-color","pink");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div style="background-color: yellow">
+    <p>点击按钮修改这个 div 元素的背景颜色。</p>
+    <button>点击</button>
+</div>
+
+<div style="background-color: yellow">
+    <p>点击按钮修改这个 div 元素的背景颜色。</p>
+    <button>点击</button>
+</div>
+
+</body>
+</html>

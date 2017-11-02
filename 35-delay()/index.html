@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("#div1").delay("slow").fadeIn();
+                $("#div2").delay("slow").fadeIn();
+                $("#div3").delay(800).fadeIn();
+                $("#div4").delay(2000).fadeIn();
+                $("#div5").delay(4000).fadeIn();
+            })
+        })
+    </script>
+</head>
+<body>
+
+<p>这个实例使用 delay()  方法来设置不同的速度值。 </p>
+<button>点击按钮，显示多个的 div 框。</button>
+<br><br>
+<div id="div1" style="width:90px;height:90px;display:none;background-color:black;"></div><br>
+<div id="div2" style="width:90px;height:90px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:90px;height:90px;display:none;background-color:blue;"></div><br>
+<div id="div4" style="width:90px;height:90px;display:none;background-color:red;"></div><br>
+<div id="div5" style="width:90px;height:90px;display:none;background-color:purple;"></div><br>
+
+</body>
+
+</body>
+</html>

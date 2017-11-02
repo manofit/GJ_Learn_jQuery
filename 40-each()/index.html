@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("li").each(function () {
+                    alert($(this).text());
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button>输出每个列表项的值</button>
+<ul>
+    <li>coffee</li>
+    <li>milk</li>
+    <li>soda</li>
+</ul>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input").keydown(function (event) {
+                $("div").html("key:"+event.which);
+            });
+        });
+    </script>
+</head>
+<body>
+
+输入名称: <input type="text">
+<p>当你在以上输入框中输入内容时，div 中会陷入输入键的数字码。</p>
+<div />
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.ajaxSetup({url:"demo_ajax_load.txt",success:function (result) {
+                    $("div").html(result);
+                }});
+                $.ajax();
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div><h2>使用 AJAX 修改文本内容</h2></div>
+<button>修改内容</button>
+
+</body>
+</html>

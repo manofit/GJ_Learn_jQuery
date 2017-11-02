@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").filter($("div p.intro")).css("background-color","yellow");
+        });
+    </script>
+</head>
+<body>
+<div style="border:1px solid black;">
+    这是一个div元素
+    <h1>欢迎来到我的主页</h1>
+    <p>我的名字叫 Donald。</p>
+    <p class="intro">我住在 Duckburg (将被选中)。</p>
+    <p>我最好的朋友是 Mickey。</p>
+</div>
+<p class="intro">这个P元素是在div元素外面的。</p>
+<p>这个P元素也是在div元素外面的。</p>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").on("custom.somenamespace",function (event) {
+                alert(event.namespace);
+            });
+            $("p").click(function (event) {
+                $(this).trigger("custom.somenamespace");
+            });
+            $("button").click(function () {
+                $("p").off("custom.somenamespace");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>点击这个段落</p>
+<button>移除namespace</button>
+
+</body>
+</html>

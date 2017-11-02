@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $.holdReady(true);
+        $(document).ready(function () {
+            $("#first").click(function () {
+                alert("解除延迟后被弹出");
+            });
+
+        });
+        $("#second").click(function () {
+            $.holdReady(false);
+        })
+
+    </script>
+</head>
+<body>
+
+<button id="first">点击测试弹出</button>
+<button id="second">解除延迟</button>
+
+</body>
+</html>

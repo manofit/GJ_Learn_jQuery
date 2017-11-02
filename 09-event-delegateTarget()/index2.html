@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("body").on("click","button",function (event) {
+                alert("dalegateTarget返回:"+event.delegateTarget.nodeName+"\n cunrrentTarget返回:"+event.currentTarget.nodeName);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button>在委托事件发生后显示dalegateTarget和currentTarget的区别</button>
+
+</body>
+</html>

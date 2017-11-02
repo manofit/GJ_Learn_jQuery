@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").on("click.mysomething",function () {
+                $(this).slideToggle();
+            });
+            $("button").click(function () {
+                $("p").off("click.mysomething");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>这是一个段落</p>
+<p>这是另外一个段落</p>
+<p>点击p元素使其消失</p>
+<button>为所有的p元素移除link.mysomething命名空间</button>
+<br><br>
+
+<div>"click.mySomething" 定义了 mySomething 命名空间。这个事件可以通过 .off("click.mySomething") 移除, 其他的点击事件并未删除。</div>
+
+</body>
+</html>

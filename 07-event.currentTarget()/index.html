@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("h1,h2,p").click(function (event) {
+                alert(event.currentTarget===this);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<h1>标题1</h1>
+<h2>标题2</h2>
+<p><b>注意：</b>点击每一个元素，返回this，所以结果为true。</p>
+
+</body>
+</html>

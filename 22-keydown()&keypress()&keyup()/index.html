@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input").keydown(function(){
+                $("input").css("background-color","yellow");
+            });
+            $("input").keyup(function(){
+                $("input").css("background-color","pink");
+            });
+            $("input").keypress(function(){
+                $("span").text(i+=1);
+            });
+        });
+    </script>
+</head>
+<body>
+
+输入您的名字:<input type="text">
+<p>在输入框按下按键改变颜色</p>
+<p>按键的次数: <span>0</span></p>
+keypress 事件不会触发所有的键（比如 ALT、CTRL、SHIFT、ESC）
+
+</body>
+</html>

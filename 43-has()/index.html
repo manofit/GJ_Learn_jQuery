@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").has("b,span").css("background-color","yellow");
+        });
+    </script>
+</head>
+<body>
+
+<h1>欢迎来到我的主页</h1>
+<p>我的<span>名字</span>叫 Donald。</p>
+<p>我住在<span>Duckburg</span>。</p>
+<p>我最好的朋友是<b>Mickey</b>。</p>
+
+<p>在这个例子中,我们选择内部有span或者b元素的所有p元素。</p>
+
+</body>
+</html>

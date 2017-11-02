@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        x=0;
+        $(document).ready(function () {
+            $(window).resize(function () {
+                $("span").test(x+=1);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>窗口重置了 <span>0</span> 次大小。</p>
+<p>尝试重置窗口大小。</p>
+
+</body>
+</html>

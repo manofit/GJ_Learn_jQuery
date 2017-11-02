@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var lastms,d;
+            $("button").click(function (event) {
+                if(lastms){
+                    d=event.timeStamp-lastms;
+                    $("p").text("milliseconds since last click event :"+d);
+                }else {
+                    $("p").test("click button again");
+                }
+                lastms=event.timeStamp;
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button>点击</button>
+<p></p>
+
+</body>
+</html>

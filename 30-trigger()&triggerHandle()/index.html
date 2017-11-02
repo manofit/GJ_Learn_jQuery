@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("input").focus(function () {
+                $("<span>获取焦点</span>").appendTo("body").fadeOut(1000);
+            });
+            $("#old").click(function () {
+                $("input").trigger("focus");
+            });
+            $("#new").click(function () {
+                $("input").triggerHandler("focus");
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+<button id="old">.trigger( "focus" )</button>
+<button id="new">.triggerHandler( "focus" )</button><br><br>
+<p>执行 .trigger 后 input 输入框自动获取焦点，触发事件的默认行为，而 .triggerHandler 仅仅
+    执行了指定的事件浏览器并未执行动作，输入框也没有获取焦点。</p>
+<input type="text" value="将获取焦点">
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        function handleName(e) {
+            alert(e.data.msg);
+        }
+        $(document).ready(function () {
+            $("p").delegate({msg:"你刚刚点击了我"},"click",handleName);
+        });
+    </script>
+</head>
+<body>
+
+<p>点击</p>
+
+</body>
+</html>

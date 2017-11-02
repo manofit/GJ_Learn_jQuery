@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function (event) {
+                $("span").text(event.timeStamp);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>点击事件发生在距离1970.1.1后的<span style="color: aqua"></span>毫秒</p>
+<button>点击</button>
+
+</body>
+</html>

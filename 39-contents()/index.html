@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").contents().filter("em").wrap("<b/>");
+            });
+
+        });
+    </script>
+</head>
+<body>
+
+<div><em>Hello world! What a beautiful day!</em></div>
+<p>在这个实例中,通过点击按钮,我们查找到所有div元素内得文本节点，并且使用b元素包裹它们。</p>
+<button>查找所有文本节点并且包裹它们</button><br>
+
+</body>
+</html>

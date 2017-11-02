@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("span").closest("ul").css({"color":"red","border":"2px solid red"});
+        });
+    </script>
+    <style>
+        .ancestors *{
+            display: block;
+            border: 2px solid lightgray;
+            color: lightgray;
+            padding: 15px;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body class="ancestors">body(曾曾祖节点)
+
+<div style="width: 500px;">div(曾祖先节点)
+    <ul>ul(第二祖先节点)
+        <ul>ul(第一祖先节点)
+            <li>li(直接父节点)
+                <span>span</span>
+            </li>
+        </ul>
+    </ul>
+
+</div>
+
+
+
+</body>
+</html>

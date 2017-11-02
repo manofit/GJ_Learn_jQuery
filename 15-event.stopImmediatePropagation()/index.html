@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("div").click(function (event) {
+                alert("事件句柄1被执行");
+                event.stopImmediatePropagation();
+            });
+            $("div").click(function(event){
+                alert("事件句柄 2 被执行");
+            });
+            $("div").click(function(event){
+                alert("事件句柄 3 被执行");
+            });
+
+        })
+    </script>
+</head>
+<body>
+
+<div style="height: 100px;width: 300px;padding: 10px;border: 1px solid blue;background-color: lightblue">点击这个div元素</div>
+
+event.stopImmediatePropagation() 方法阻止剩下的事件处理程序被执行。该方法阻止事件在 DOM 树中向上冒泡。
+</body>
+</html>

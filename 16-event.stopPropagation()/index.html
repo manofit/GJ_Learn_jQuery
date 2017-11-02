@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("span").click(function (event) {
+                alert("the span element is clickedx");
+                event.stopPropagation();
+            });
+            $("p").click(function () {
+                alert("the p element is clicked");
+            });
+            $("div").click(function () {
+                alert("the div element is clicked");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<div style="height: 100px;width: 300px;padding: 10px;border: 1px solid blue;background-color: aqua">
+    this is a div element
+    <p>this is a p element in div element</p>
+    <span>this is span element in div element</span>
+</div>
+
+</body>
+</html>

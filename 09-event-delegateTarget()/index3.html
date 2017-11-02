@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").on("click",function (event) {
+                alert("delegateTarget 返回: " + event.delegateTarget.nodeName +
+                        "\ncurrentTarget 返回: " + event.currentTarget.nodeName);
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button>演示对于直接绑定事件，delegateTarget 和 currentTarget 是相等的。</button>
+
+</body>
+</html>

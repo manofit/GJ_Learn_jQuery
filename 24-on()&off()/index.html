@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("p").on("click",function () {
+                $(this).css("background-color","pink");
+            });
+            $("button").click(function () {
+                $("p").off("click");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<p>点击这个段落修改它的背景颜色。</p>
+<p>点击一下按钮再点击这个段落( click 事件被移除 )。</p>
+
+<button>移除 click 事件句柄</button>
+
+</body>
+</html>
